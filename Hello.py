@@ -7,4 +7,4 @@ st.title(TITLE)
 
 st.write('This is a simple Streamlit app.')
 
-st.sidebar.title("Select a page")
+st.sidebar.success("Select a page from the list above")

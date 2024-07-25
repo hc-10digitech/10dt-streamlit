@@ -9,4 +9,4 @@ st.title(TITLE)
 st.write('''This is a Streamlit app that reads a spreadsheet and graphs the data, using interactive elements
           (or at least it will be)''')
 
-st.sidebar.title("Select a page")
+st.sidebar.success("Select a page from the list above")
