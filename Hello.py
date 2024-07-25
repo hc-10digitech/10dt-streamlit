@@ -1,7 +1,9 @@
 import streamlit as st
-st.set_page_config(page_title='Hello, Everyone!', page_icon=':smiley:')
 
-st.title('Hello, Everyone!')
+TITLE = "Hello, Everyone!"
+st.set_page_config(page_title=TITLE, page_icon=':smiley:')
+
+st.title(TITLE)
 
 st.write('This is a simple Streamlit app.')
 
