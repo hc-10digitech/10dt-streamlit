@@ -1,7 +1,5 @@
 import streamlit as st
 import requests
-import streamlit as st
-import requests
 
 # Define a function to load data from a given URL
 @st.cache_data()
