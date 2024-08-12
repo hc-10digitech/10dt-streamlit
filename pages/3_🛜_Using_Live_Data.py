@@ -22,18 +22,22 @@ st.title(TITLE)
 st.write('''This is a Streamlit app that reads data from the internet, and uses interactive elements to present it
           (or at least it will be)''')
 
+API_DICT = {
+    "AFL Ladder": "https://api.squiggle.com.au/?q=standings",
+    "Fortnite News": 'https://fortnite-api.com/v2/news',
+    "Dog Pic of the Day": "https://dog.ceo/api/breeds/image/random",
+    "Jelly Belly Flavours": "https://jellybellywikiapi.onrender.com/api/Beans/"
+}
+
+
 # Allow the user to select a data source from a dropdown menu
-selected_source = st.selectbox("Select a data source", ["AFL Ladder", "Fortnite News"])
+selected_source = st.selectbox("Select a data source", API_DICT.keys())
 
 # Load data based on the selected data source
-if selected_source == "AFL Ladder":
-    # Set a custom header for the AFL Ladder API request
-    header = {'User-Agent': "Mr Matheson's streamlit app for Yr 10 Digitech - geoff.matheson@education.vic.gov.au"}
-    # Load data from the AFL Ladder API
-    data = load_data('https://api.squiggle.com.au/?q=standings', header=header)
-elif selected_source == "Fortnite News":
-    # Load data from the Fortnite News API
-    data = load_data('https://fortnite-api.com/v2/news')
+header = {'User-Agent': "Mr Matheson's streamlit app for Yr 10 Digitech - geoff.matheson@education.vic.gov.au"}
+# Load data from the Selected API
+data = load_data(API_DICT[selected_source], header=header)
+
 
 # Display the loaded data on the app
 st.write(data)
