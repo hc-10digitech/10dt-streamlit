@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-# Define a function to load data from a given URL
+# Define a function to load data from a given URL. We are caching the 
+# data to avoid making multiple requests to the server
 @st.cache_data()
 def load_data(url, header = None):
     if header:
@@ -31,7 +32,7 @@ API_DICT = {
 
 
 # Allow the user to select a data source from a dropdown menu
-selected_source = st.selectbox("Select a data source", API_DICT.keys())
+selected_source = st.selectbox("**Select a data source**", API_DICT.keys())
 
 # Load data based on the selected data source
 header = {'User-Agent': "Mr Matheson's streamlit app for Yr 10 Digitech - geoff.matheson@education.vic.gov.au"}
