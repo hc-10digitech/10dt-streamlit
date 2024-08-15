@@ -1,6 +1,9 @@
 import streamlit as st
 
-st.header("Using Inputs")
+TITLE = "Using Number Inputs"
+st.set_page_config(page_title=TITLE, page_icon=':smiley', layout="wide")
+
+st.header("Using Number Inputs")
 
 col1, col2 = st.columns(2)
 

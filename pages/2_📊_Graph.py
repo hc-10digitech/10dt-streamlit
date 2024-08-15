@@ -5,7 +5,7 @@ TITLE = "Graphing from a Spreadsheet"
 def load_data():
     return pd.read_csv('gameconsoles.csv')
 
-st.set_page_config(page_title=TITLE, page_icon=':bar_chart:')
+st.set_page_config(page_title=TITLE, page_icon=':bar_chart:', layout="wide")
 
 st.title(TITLE)
 

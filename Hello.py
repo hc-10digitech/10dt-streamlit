@@ -3,7 +3,7 @@ import streamlit as st
 TITLE = "Hello, Everyone!"
 
 # This line sets the title and icon of the page. 
-st.set_page_config(page_title=TITLE, page_icon=':smiley')
+st.set_page_config(page_title=TITLE, page_icon=':smiley',  layout="wide")
 
 # This writes a title and normal text message
 st.title(TITLE)
@@ -15,13 +15,13 @@ st.subheader("This is a subheader. It is even smaller.")
 column1, column2 = st.columns(2)
 
 with column1:
-    st.subheader("This information is going on the left")
+    st.write("This information is going on the left")
     if st.button("Press Me"):
         st.balloons()
     
 with column2:
-    st.subheader("This information is going on the right")
-    st.image(image="./images/monster.png")
+    st.write("This information is going on the right")
+    st.image(image="./images/monster.png", caption="My Cute Monster")
     
 
 
