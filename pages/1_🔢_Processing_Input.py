@@ -9,4 +9,5 @@ with col1:
     number_2 = st.number_input("Enter Second Number", step=1)
     
     
-# Put the
+with col2:
+    st.write("Output Information will go here")
