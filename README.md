@@ -6,11 +6,11 @@ applications.
 This project is a multi-page streamlit web application. Each page has some base code (some more than others), that you will add to so that you can create a working page. 
 
 ## The pages
-* Hello.py - This is the landing or home page of the application. It is a good place for you to check out how to put things like images, text, headings etc. onto a page. All the other pages are stored inside the pages folder
-* 1_🔢_Processing_Input - This page gives you the chance to use your skills from the Introduction to Python excercises to accept numerical input and perform calculations. The template includes two input boxes, but you might choose to solve a problem that incorporates more.
-* 2_📊_Graph.py - This page is to demonstrate creating a graph. The sample code loads data from a CSV spreadsheet file for you, which you will use to create one (or more) graphs.
-* 3_📈_Interactive_Graph.py - This page is for you to create an interactive graph. You might use code from the previous page to load a spreadsheet, or find one of your own with interesting data.
-* 4_🛜_Using_Live_Data.py - This page demonstrates how to gather data from a public API. APIs allow you to get easily processed data from live data sources.
+* **Hello.py** - This is the landing or home page of the application. It is a good place for you to check out how to put things like images, text, headings etc. onto a page. All the other pages are stored inside the pages folder
+* **1_🔢_Processing_Input.py** - This page gives you the chance to use your skills from the Introduction to Python excercises to accept numerical input and perform calculations. The template includes two input boxes, but you might choose to solve a problem that incorporates more.
+* **2_📊_Graph.py** - This page is to demonstrate creating a graph. The sample code loads data from a CSV spreadsheet file for you, which you will use to create one (or more) graphs.
+* **3_📈_Interactive_Graph.py** - This page is for you to create an interactive graph. You might use code from the previous page to load a spreadsheet, or find one of your own with interesting data.
+* **4_🛜_Using_Live_Data.py** - This page demonstrates how to gather data from a public API. APIs allow you to get easily processed data from live data sources.
 
 As part of the project, you will also add at least one additional page. This is your opportunity to experiment further: either by combining some of the skills you have learned, or by trying something new.
 

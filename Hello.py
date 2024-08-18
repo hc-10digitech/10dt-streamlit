@@ -10,7 +10,6 @@ st.title(TITLE)
 st.write('This is a simple Streamlit app.')
 
 st.header("This is a header. It's smaller than the other one")
-st.subheader("This is a subheader. It is even smaller.")
 
 column1, column2 = st.columns(2)
 
@@ -18,6 +17,7 @@ with column1:
     st.write("This information is going on the left")
     if st.button("Press Me"):
         st.balloons()
+        st.toast("Button pressed!", icon=":material/radio_button_checked:")
     
 with column2:
     st.write("This information is going on the right")
