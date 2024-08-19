@@ -27,7 +27,8 @@ API_DICT = {
     "AFL Ladder": "https://api.squiggle.com.au/?q=standings",
     "Fortnite News": 'https://fortnite-api.com/v2/news',
     "Dog Pic of the Day": "https://dog.ceo/api/breeds/image/random",
-    "Jelly Belly Flavours": "https://jellybellywikiapi.onrender.com/api/Beans/"
+    "Jelly Belly Flavours": "https://jellybellywikiapi.onrender.com/api/Beans/",
+    "Deck of Cards": "https://deckofcardsapi.com/api/deck/new/draw/?count=5",
 }
 
 
