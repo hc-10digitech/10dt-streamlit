@@ -26,7 +26,7 @@ with column1:
 # Second column    
 with column2:
     st.write("This information is going on the right")
-    st.image(image="./images/monster.png", caption="My Cute Monster. AI Generated Image, using ChatGPT-4o")
+    st.image(image="./images/IMG_2683.JPEG", caption="Martin Luther King Jr.")
     
 
 # This adds the nice message below the sidebar navigation
