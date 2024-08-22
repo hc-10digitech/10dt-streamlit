@@ -29,8 +29,8 @@ print(df['Released Year'].min(), df['Released Year'].max())
 df['Discontinuation Year'] = df['Discontinuation Year'].replace(0, 2024)
 df['Discontinuation Year'] = df['Discontinuation Year'].fillna(df['Discontinuation Year'].max())
 st.scatter_chart(df, 
-                 x='Released Year', 
-                 y='Discontinuation Year',
+                 x='Company', 
+                 y='Released Year',
                  color='Console Name', 
                  size='Units sold (million)')
 
