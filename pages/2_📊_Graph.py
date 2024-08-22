@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import altair as alt
+#import plotly.express as px
 
 TITLE = "Graphing from a Spreadsheet"
 @st.cache_data
@@ -23,15 +23,23 @@ st.dataframe(df)
 st.bar_chart(df, x='Company',
              y='Units sold (million)',
              color='Console Name',
+             use_container_width=True, 
              height=400)
 
 print(df['Released Year'].min(), df['Released Year'].max())
 df['Discontinuation Year'] = df['Discontinuation Year'].replace(0, 2024)
 df['Discontinuation Year'] = df['Discontinuation Year'].fillna(df['Discontinuation Year'].max())
-st.scatter_chart(df, 
-                 x='Company', 
-                 y='Released Year',
-                 color='Console Name', 
-                 size='Units sold (million)')
+
+st.vega_lite_chart(df, 
+                   {
+                       "mark": {"type": "circle", "tooltip": True, "size": 300},
+                       'encoding': {
+                           'x': {'field': 'Released Year', 'type': 'quantitative', "scale": {"domainMin": 1970, "domainMax": 2025}},
+                           'y': {'field': 'Units sold (million)', 'type': 'quantitative'},
+                           'color': {'field': 'Company', 'type': 'nominal'}
+                       }
+                   },
+                   height=400, theme=None, use_container_width=True)
+
 
 st.sidebar.success("Select a page from the list above")
