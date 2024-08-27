@@ -22,7 +22,6 @@ st.dataframe(df)
 #print(df.columns)
 st.bar_chart(df, x='Company',
              y='Units sold (million)',
-             color='Console Name',
              use_container_width=True, 
              height=400)
 
@@ -32,14 +31,14 @@ df['Discontinuation Year'] = df['Discontinuation Year'].fillna(df['Discontinuati
 
 st.vega_lite_chart(df, 
                    {
-                       "mark": {"type": "circle", "tooltip": True, "size": 300},
+                       "mark": {"type": "circle", "tooltip": {"content":"data"}, "size": 400},
                        'encoding': {
                            'x': {'field': 'Released Year', 'type': 'quantitative', "scale": {"domainMin": 1970, "domainMax": 2025}},
                            'y': {'field': 'Units sold (million)', 'type': 'quantitative'},
-                           'color': {'field': 'Company', 'type': 'nominal'}
+                           'color': {'field': 'Console Name', 'type': 'nominal'}
                        }
                    },
-                   height=400, theme=None, use_container_width=True)
+                   height=600, theme=None, use_container_width=True)
 
 
 st.sidebar.success("Select a page from the list above")
