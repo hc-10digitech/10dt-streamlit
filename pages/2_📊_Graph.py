@@ -14,4 +14,5 @@ st.write("At the moment all it does is show the data from the spreadsheet")
 df = load_data()
 st.dataframe(df)
 
+
 st.sidebar.success("Select a page from the list above")
