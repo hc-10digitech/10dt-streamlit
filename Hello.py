@@ -1,13 +1,14 @@
 import streamlit as st
+
 # Setting TITLE as a constant that I use in multiple places
 TITLE = "Hello, Everyone!"
 
-# This line sets the title and icon of the page. 
-st.set_page_config(page_title=TITLE, page_icon=':smiley',  layout="wide")
+# This line sets the title and icon of the page.
+st.set_page_config(page_title=TITLE, page_icon=":smiley", layout="wide")
 
 # This writes a title and normal text message
 st.title(TITLE)
-st.write('This is a simple Streamlit app.')
+st.write("This is a simple Streamlit app.")
 
 # Heading is a little smaller
 st.header("This is a header. It's smaller than the other one")
@@ -23,11 +24,11 @@ with column1:
         st.balloons()
         st.toast("Button pressed!", icon=":material/radio_button_checked:")
 
-# Second column    
+# Second column
 with column2:
     st.write("This information is going on the right")
     st.image(image="./images/IMG_2683.JPEG", caption="Martin Luther King Jr.")
-    
+
 
 # This adds the nice message below the sidebar navigation
 st.sidebar.success("Select a page from the list above")
